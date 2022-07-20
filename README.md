@@ -139,14 +139,26 @@ database in the terminal with the `sqlite3 pets_database.db` command. Once
 there, execute the `.schema` command and you should see that the schema of the
 Cats table does include the `breed` column.
 
+<details>
+  <summary>
+    <em>When is a statement in <code>filename.sql</code> executed?</em>
+  </summary>
+
+  <h3>When it is run from the terminal with <code>sqlite3 filename.sql</code>.</h3>
+  <p>Saving the <code>.sql</code> file stores your statement for execution
+     later on. It is only executed when the file is called in a
+     <code>sqlite3</code> command from the terminal.</p>
+</details>
+<br/>
+
 ***
 
 ## Conclusion
 
 You've now seen how to write your SQL code in a file, and execute the code in
 those files using the `sqlite3` application in the terminal. This workflow is
-similar to what you're used to for running Ruby applications by running
-`ruby filename.rb` from the terminal: the program reads the content of the file
+similar to what you're used to for running Python applications by running
+`python filename.py` from the terminal: the program reads the content of the file
 (our code) and executes it. The key difference is that this time, running the
 code actually makes some _changes_ to another file in the file system: in this
 case, altering the structure of the database in the `pets_database.db` file.
